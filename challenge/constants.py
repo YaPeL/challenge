@@ -1,3 +1,6 @@
+"""
+Special file used to store the constants used through the project
+"""
 from typing import Union
 
 ARRAY_START = "["

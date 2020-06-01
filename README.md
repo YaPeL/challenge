@@ -1,5 +1,5 @@
 [![Build Status - GitHub](https://github.com/YaPeL/challenge/workflows/test/badge.svg)](https://github.com/YaPeL/challenge/actions?query=workflow%3Atest)
-[![](https://img.shields.io/badge/python-3.8+-green.svg)](https://www.python.org/download/releases/3.8.0/)
+[![](https://img.shields.io/badge/python-3.8+-green.svg)](https://www.python.org/downloads/release/python-383/)
 
 # challenge
 challenge for TruSTAR

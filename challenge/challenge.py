@@ -5,6 +5,12 @@ from .property import ChainProperty
 
 
 def f(obj: str, properties: list) -> dict:
+    """
+    The function required by the challenge
+    :param obj: a string representing a json
+    :param properties: a list of properties we want to substract
+    :return: a dic consisting of the values we could get from obj
+    """
     result = {}
     obj_json = json.loads(obj)
     for p in properties:
@@ -17,7 +23,9 @@ def f(obj: str, properties: list) -> dict:
 
 
 class GitExtractor:
-
+    """
+    A class used to clone a github repo to a temp file, and call the f function on every json
+    """
     def __init__(self, repo, folder, props, branch='master'):
         import tempfile
         t = tempfile.mkdtemp()

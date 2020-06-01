@@ -7,6 +7,9 @@ from .constants import (
 
 
 class Property:
+    """
+    Helper class for the ChainProperty class, infers when it need to access an array or an object
+    """
     def __init__(self, prop: str):
         prop_pos = prop.find(ARRAY_START)
         self.is_array = prop_pos > -1
@@ -19,6 +22,8 @@ class Property:
     def access(self, obj: dict) -> JSON_PROPERTY:
         result = obj[self.prop]
         if self.is_array:
+            # Special case, the property may want to access an array, but the object may have a string
+            # python can use a string as an array, but we don't want that.
             if isinstance(result, list):
                 result = result[self.pos]
             else:
@@ -27,7 +32,10 @@ class Property:
 
 
 class ChainProperty:
-
+    """
+    A class used represent a chain of properties
+    knows how to retrieve the values from a dict representing a json
+    """
     def __init__(self, chain: str):
         self.properties = chain
         self.chain = chain.split(PROPERTY_SEPARATOR)
