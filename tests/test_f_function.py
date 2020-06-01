@@ -1,6 +1,6 @@
 import json
 import pytest
-from challenge import f
+from challenge.challenge import f
 from .resources import (
     DEFAULT_JSON,
     EMPTY_JSON,
