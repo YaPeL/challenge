@@ -2,7 +2,7 @@ import argparse
 import coloredlogs
 import logging
 
-from challenge import GitExtractor
+from challenge.challenge import GitExtractor
 
 
 def main(args):
