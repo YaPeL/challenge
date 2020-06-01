@@ -7,6 +7,7 @@ challenge for TruSTAR
 ### Install
 ```bash
 $ virtualenv -p python3 venv 
+$ source venv/bin/activate
 $ pip3 install -r requirements.txt
 ```
 
@@ -18,7 +19,7 @@ $ pytest tests/
 ```
 
 ### Usage
-Using the example of the challenge:
+Using the example of the challenge (give it a few seconds, the lib I've used for navigating through github has to clone the repo to a temp directory):
 ```bash
 $ python3 cli.py --repo 'https://github.com/mitre/cti' --folder 'enterprise-attack/attack-pattern' --props "id" "objects[0].name" "objects[0].kill_chain_phases"
 ```
