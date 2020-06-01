@@ -1,5 +1,5 @@
 [![Build Status - GitHub](https://github.com/YaPeL/challenge/workflows/test/badge.svg)](https://github.com/YaPeL/challenge/actions?query=workflow%3Atest)
-
+[![](https://img.shields.io/badge/python-3.8+-green.svg)](https://www.python.org/download/releases/3.8.0/)
 
 # challenge
 challenge for TruSTAR
@@ -26,7 +26,7 @@ $ python3 cli.py --repo 'https://github.com/mitre/cti' --folder 'enterprise-atta
 ### alternative usage
 we could build a python package instead, by doing
 ```bash
-$ rm -rf dist build */*.egg-info *.egg-info # optional unnesessary the first time
+$ rm -rf dist build */*.egg-info *.egg-info # optional unnecessary the first time
 $ python3 setup_package.py clean bdist_wheel
 $ pip3 install dist/apptim_cli-0.0.1-py2.py3-none-any.whl
 ```
