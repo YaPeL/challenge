@@ -19,7 +19,10 @@ class Property:
     def access(self, obj: dict) -> JSON_PROPERTY:
         result = obj[self.prop]
         if self.is_array:
-            result = result[self.pos]
+            if isinstance(result, list):
+                result = result[self.pos]
+            else:
+                raise TypeError("List expected, got string instead")
         return result
 
 
@@ -35,5 +38,5 @@ class ChainProperty:
             pos = Property(n).access(pos)
         return pos
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:
         return self.properties

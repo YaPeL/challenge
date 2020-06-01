@@ -10,7 +10,7 @@ def f(obj: str, properties: list) -> dict:
     for p in properties:
         pp = ChainProperty(p)
         try:
-            result[pp] = pp.get_value(obj_json)
+            result[str(pp)] = pp.get_value(obj_json)
         except (TypeError, KeyError, IndexError):
             pass
     return result
