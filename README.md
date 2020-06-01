@@ -1,3 +1,6 @@
+[![Build Status - GitHub](https://github.com/YaPeL/challenge/workflows/test/badge.svg)](https://github.com/YaPeL/challenge/actions?query=workflow%3Atest)
+
+
 # challenge
 challenge for TruSTAR
 
