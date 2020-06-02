@@ -61,9 +61,8 @@ becomes this:
     },
     "objects": {
       "type": "array",
-      "access": 0,
       "items": {
-        "anyOf": [
+        "0": [
           {
             "properties": {
               "kill_chain_phases": {
@@ -83,9 +82,6 @@ becomes this:
 }
 ```
 
-Pros: all the info and the data types are set on the json
+Pros: all the info and the data types are set on the json, no need to infer anything.
 
-Cons: its obviously more verbose, and sadly, we don't know from where does the property list comes from, so maybe its something out of our control,
-finally, there may be limitations to what the schema can represent
-(for example, the index key is made up by me, I didn't find how to represent a "give me the first element of an array")
- meaning we may need to implement extra logic somewhere
+Cons: its obviously more verbose, and sadly, we don't know from where does the property list comes from, so maybe its something out of our control.
