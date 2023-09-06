@@ -1,2 +1,2 @@
 coloredlogs==14.0 # pretty print logging
-gitpython==3.1.3 # clone git repos
+gitpython==3.1.34 # clone git repos
